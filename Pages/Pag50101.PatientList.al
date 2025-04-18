@@ -1,0 +1,47 @@
+page 50101 "Patient List"
+{
+    Caption = 'Patient List';
+    PageType = List;
+    SourceTable = Patient;
+    CardPageId = "Patient Card";
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(General)
+            {
+                field(PatientID; Rec.PatientID)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Patient ID field.', Comment = '%';
+                }
+                field(Name; Rec.Name)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Name field.', Comment = '%';
+                }
+                field(DateOfBirth; Rec.DateOfBirth)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Date of Birth field.', Comment = '%';
+                }
+                field(MedicalHistory; Rec.MedicalHistory)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Medical History field.', Comment = '%';
+                }
+                field(Address; Rec.Address)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Address field.', Comment = '%';
+                }
+                field(PhoneNumber; Rec.PhoneNumber)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Phone Number field.', Comment = '%';
+                }
+            }
+        }
+    }
+}
